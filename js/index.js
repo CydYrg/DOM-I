@@ -44,9 +44,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
   // * [ ] Create selectors by using any of the DOM element's methods
  // * [] Note that IDs have been used on all images.Use the IDs to update src path content
 
-let header = document.getElementById(".cta");
-header.setAttribute('src', siteContent["header"]["img/header-img.png"])
-
+const ctaImg = document.getElementById("cta-img");
+ctaImg.src = siteContent.cta["img-src"];
   // * [ ] Change the color of the navigation text to be green.
  // * [] Utilize`.appendChild()` and`.prepend()` to add two new items to the navigation system.You can call them whatever you want.
 //* [] Check your work by looking at the[original html](original.html) in the browser
