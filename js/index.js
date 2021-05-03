@@ -49,13 +49,28 @@ const ctaImg = document.getElementById("cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
   // * [ ] Change the color of the navigation text to be green.
- // * [] Utilize`.appendChild()` and`.prepend()` to add two new items to the navigation system.You can call them whatever you want.
-//* [] Check your work by looking at the[original html](original.html) in the browser
 
 const nav = document.querySelector('nav');
 const navItem = nav.querySelectorAll('a');
 navItem.textContent = siteContent["nav"]["nav-item-1"]
 console.log(navItem.textContent)
-navItem.forEach((currentItem) => { 
+navItem.forEach((currentItem) => {
   currentItem.style.color = 'green';
+
+ // * [] Utilize`.appendChild()` and`.prepend()` to add two new items to the navigation system.You can call them whatever you want.
+
+ const secondCtaImg = ctaImg.cloneNode(true);
+ document.querySelector(".cta-img").appendChild(secondCtaImg);
+
+ button.remove();
+ document.body.prepend(button);
+
+// const extraLink = document.createElement("a");
+//extraLink.textContent = "Extra";
+//extraLink.href = '#'
+//console.log(blogLink);
+
+//* [] Check your work by looking at the[original html](original.html) in the browser
+
+
 });
